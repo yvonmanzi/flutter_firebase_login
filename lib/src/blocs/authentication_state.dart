@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+part of 'authentication_bloc.dart';
 
 //this equatable thing had eluded me for weeks up until now. Now i got ya haha.
 // when I was comparing states using is, I was actually using equable stuff. it
