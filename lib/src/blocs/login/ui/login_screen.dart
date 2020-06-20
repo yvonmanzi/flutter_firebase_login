@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterfirebaselogin/src/blocs/login/blocs/login_barrel.dart';
+import 'package:flutterfirebaselogin/src/blocs/login/blocs/login.dart';
 import 'package:flutterfirebaselogin/src/repository/repository.dart';
 import 'package:meta/meta.dart';
 
