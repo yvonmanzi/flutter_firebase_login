@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_firebase_login/validators.dart';
+import 'package:flutterfirebaselogin/src/blocs/login/blocs/validators.dart';
 import 'package:flutterfirebaselogin/src/repository/repository.dart';
 import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
@@ -22,8 +22,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   // To give the user sometime to stop typing before we start validating the inputs
   @override
   Stream<Transition<LoginEvent, LoginState>> transformEvents(
-      Stream<LoginEvent> events,
-      TransitionFunction<LoginEvent, LoginState> transitionFn,) {
+    Stream<LoginEvent> events,
+    TransitionFunction<LoginEvent, LoginState> transitionFn,
+  ) {
     final nonDebounceStream = events.where((event) {
       return (event is! LoginEmailChanged && event is! LoginPasswordChanged);
     });
@@ -43,13 +44,11 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       yield* _mapLoginEmailChangedToState(event.email);
     else if (event is LoginPasswordChanged) {
       yield* _mapLoginPasswordChangedToState(event.password);
-    }
-    else if (event is LoginWithGooglePressed) {
+    } else if (event is LoginWithGooglePressed) {
       yield* _mapLoginWithGooglePressedToState();
-    }
-    else if (event is LoginWithCredentialsPressed) {
+    } else if (event is LoginWithCredentialsPressed) {
       yield* _mapLoginWithCredentialsPressedToState(
-          email: event.email, password: event.password)
+          email: event.email, password: event.password);
     }
   }
 
