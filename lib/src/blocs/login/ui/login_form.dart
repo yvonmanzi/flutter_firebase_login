@@ -4,6 +4,10 @@ import 'package:flutterfirebaselogin/src/blocs/authentication/authentication_blo
 import 'package:flutterfirebaselogin/src/blocs/login/blocs/login.dart';
 import 'package:flutterfirebaselogin/src/repository/repository.dart';
 
+import 'create_account_button.dart';
+import 'google_login_button.dart';
+import 'login_button.dart';
+
 class LoginForm extends StatefulWidget {
   final UserRepository _userRepository;
 
@@ -67,7 +71,7 @@ class _LoginFormState extends State<LoginForm> {
               content: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text('Loggin in...'),
+              Text('Logging in...'),
               CircularProgressIndicator(),
             ],
           )));

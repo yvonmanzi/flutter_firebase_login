@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterfirebaselogin/src/blocs/authentication/authentication_bloc.dart';
 import 'package:flutterfirebaselogin/src/blocs/register/bloc/register.dart';
-import 'package:flutterfirebaselogin/src/repository/repository.dart';
-import 'package:meta/meta.dart';
+import 'package:flutterfirebaselogin/src/blocs/register/ui/register_button.dart';
 
 class RegisterForm extends StatefulWidget {
   @override
@@ -142,5 +141,4 @@ class _RegisterFormState extends State<RegisterForm> {
       ),
     );
   }
-}
 }

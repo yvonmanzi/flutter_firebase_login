@@ -4,6 +4,8 @@ import 'package:flutterfirebaselogin/src/blocs/login/blocs/login.dart';
 import 'package:flutterfirebaselogin/src/repository/repository.dart';
 import 'package:meta/meta.dart';
 
+import 'login_form.dart';
+
 class LoginScreen extends StatelessWidget {
   final UserRepository _userRepository;
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterfirebaselogin/src/blocs/register/bloc/register_bloc.dart';
+import 'package:flutterfirebaselogin/src/blocs/register/ui/register_form.dart';
 import 'package:flutterfirebaselogin/src/repository/repository.dart';
 import 'package:meta/meta.dart';
 
